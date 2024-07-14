@@ -1,10 +1,11 @@
 {
-  "name": "concurret",
+  "name": "concurrent",
   "version": "1.0.0",
   "description": "test concurrent updates",
   "main": "src/main.js",
   "scripts": {
     "start": "node src/main.js",
+    "start:cron-worker": "node src/workers/cron.worker.js",
     "migration:up": "npx sequelize-cli db:migrate",
     "migration:down": "npx sequelize-cli db:migrate:undo",
     "db:seed": "npx sequelize-cli db:seed:all",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "axios": "^1.7.2",
+    "bullmq": "^5.8.7",
     "sequelize-cli": "^6.6.2"
   }
 }
